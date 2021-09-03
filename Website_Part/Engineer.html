@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+	  <meta charset="UTF-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+      <script src="script.js"></script>
+     
+      <!-- If you are opening this page from local machine, uncomment belwo line 
+       
+	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> 
+	  -->
+	 
+	 <!-- If you are opening this page from a web hosting server machine, uncomment belwo line -->
+	 
+	 <script type="text/javascript">
+		document.write([
+			"\<script src='",
+			("https:" == document.location.protocol) ? "https://" : "http://",
+			"ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js' type='text/javascript'>\<\/script>" 
+		].join(''));
+	  </script>
+	  
+
+      <title>Controlling Unit</title>
+	 <style>
+	.center { 
+		height: 400px;
+		width: 400px;
+		background: #d9dbcb;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -170px;
+		margin-left: -200px;
+	}
+	
+	.form{
+		padding-top: 50px;
+		padding-right: 30px;
+		padding-bottom: 50px;
+		padding-left: 30px;
+	}
+
+	.button {
+		background-color: #4CAF50; /* Green */
+		border: none;
+		color: white;
+		padding: 16px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+		cursor: pointer;
+	}
+
+	.button1 {
+		background-color: white; 
+		color: green; 
+	}
+
+	.button1:hover {
+		background-color: #4CAF50;
+		color: white;
+	}
+
+	.button3 {
+		background-color: white; 
+		color: red; 
+	}
+
+	.button3:hover {
+		background-color: #F44336;
+		color: white;
+	}
+
+	.ip{
+		background-color: #fffff; /* Green */
+		border: none;
+		color: black;
+		padding: 16px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		-webkit-transition-duration: 0.4s; /* Safari */
+	}
+
+	.footer{
+		background:#eaedd7;
+		width:100%;
+		height:100px;
+		position:absolute;
+		bottom:0;
+		left:0;
+	}
+
+	</style>
+      
+   </head>
+
+   <body bgcolor="#bbbcb1">
+    
+   <center>
+		<h1 style="font-family: Helvetica;color: Black;">Hello, Omar Sameh!</h1>
+		<h2 style="font-family: Helvetica;color: Black;">Factory Control Unit</h2>
+		<h4 style="font-family: Helvetica;color: Black;">Have A nice day :)</h4>
+	</center>
+   
+   <div class="center">
+	<div align="center" class="form">
+       <form action="" method="get">
+             <button type="button"  class="button button1" >Leds Factory Control</button>
+             <br>
+			  <button type="button" class="button button3" >Motor Factory Control</button>
+			  <br>
+			  <textarea id="logger" class="ip" placeholder="LOGS" readonly></textarea>
+        </form>
+		<br><br>
+	 </div>
+	</div>
+	
+	<footer class="footer">
+		<center>
+			<h4 style="font-family: Helvetica;color: Black;">Developed By: Omar Sameh Mahmoud</h4>
+			<h5 style="font-family: Helvetica;color: Black;">EGO Factory &copy; 2019  </h5>
+		</center>
+	</footer>
+
+    </body>
+    
+</html>

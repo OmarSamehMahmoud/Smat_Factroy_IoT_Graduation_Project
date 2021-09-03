@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Observation Manager Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  		 <script type="text/javascript">
+		document.write([
+			"\<script src='",
+			("https:" == document.location.protocol) ? "https://" : "http://",
+			"ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js' type='text/javascript'>\<\/script>" 
+		].join(''));
+	  </script>
+	 <script>
+		window.onload = function() {
+            loaddata();
+        };
+		function loaddata(){
+				var url = "https://egofactory.000webhostapp.com/api/factory/read_all.php";
+				var url1 = "https://egofactory.000webhostapp.com/api/factory/read_all.php";
+				var url2 = "https://egofactory.000webhostapp.com/api/factory/read_all.php";
+			    var url3 = "https://egofactory.000webhostapp.com/api/factory/read_all.php";
+			    var url4 = "https://egofactory.000webhostapp.com/api/factory/read_all.php";
+				var url5 = "https://egofactory.000webhostapp.com/api/factory/read_all.php";
+				var url6 = "https://egofactory.000webhostapp.com/api/factory/read_all.php";
+				var url7 = "https://egofactory.000webhostapp.com/api/factory/read_all.php";
+				var url8 = "https://egofactory.000webhostapp.com/api/factory/read_all.php";
+				$.getJSON(url,function(data) {
+                    var val= data;
+                   var water=(data['factory'][(Object.keys(data['factory']).length)-1]['waterdetect']);
+                   document.getElementById("water").innerHTML = "<img src = 'humidity.png' height=\"60px\" width=\"60px\" style='vertical-align: middle' />  " +water;
+					console.log(data['factory'][(Object.keys(data['factory']).length)-1]['waterdetect']);
+				});
+				$.getJSON(url1,function(data1) {
+                    var val1= data1;
+                   var color=(data1['factory'][(Object.keys(data1['factory']).length)-1]['colordetect']);
+                   document.getElementById("col").innerHTML = "<img src = 'color.png' height=\"60px\" width=\"60px\" style='vertical-align: middle' />  " +color;
+					console.log(data1['factory'][(Object.keys(data1['factory']).length)-1]['colordetect']);
+				});
+				$.getJSON(url2,function(data2) {
+                    var val2= data2;
+                   var weight=(data2['factory'][(Object.keys(data2['factory']).length)-1]['weightdetect']);
+                   document.getElementById("wei").innerHTML = "<img src = 'Weight.png' height=\"60px\" width=\"60px\" style='vertical-align: middle' />  " +weight;
+					console.log(data2['factory'][(Object.keys(data2['factory']).length)-1]['weightdetect']);
+				});
+				$.getJSON(url3,function(data3) {
+                    var val3= data3;
+                   var shape=(data3['factory'][(Object.keys(data3['factory']).length)-1]['shapedetect']);
+                   document.getElementById("sha").innerHTML = "<img src = 'shape.png' height=\"60px\" width=\"60px\" style='vertical-align: middle' />  " +shape;
+					console.log(data3['factory'][(Object.keys(data3['factory']).length)-1]['shapedetect']);
+				});
+				$.getJSON(url4,function(data4) {
+                    var val4= data4;
+                   var quali=(data4['factory'][(Object.keys(data4['factory']).length)-1]['qualifieddetect']);
+                   document.getElementById("qua").innerHTML = "<img src = 'QUALIFIED.png' height=\"60px\" width=\"60px\" style='vertical-align: middle' />  " +quali;
+					console.log(data4['factory'][(Object.keys(data4['factory']).length)-1]['qualifieddetect']);
+				});
+				$.getJSON(url5,function(data5) {
+                    var val5= data5;
+                   var total=(data5['factory'][(Object.keys(data5['factory']).length)-1]['alldetect']);
+                   document.getElementById("TOT").innerHTML = "<img src = 'TOTAL.png' height=\"60px\" width=\"60px\" style='vertical-align: middle' />  " +total;
+					console.log(data5['factory'][(Object.keys(data5['factory']).length)-1]['alldetect']);
+				});
+				$.getJSON(url6,function(data6) {
+                    var val6= data6;
+                   var fire=(data6['factory'][(Object.keys(data6['factory']).length)-1]['flamedetect']);
+                   document.getElementById("fire").innerHTML = "<img src = 'fire.png' height=\"60px\" width=\"60px\" style='vertical-align: middle' />  " +fire;
+					console.log(data6['factory'][(Object.keys(data6['factory']).length)-1]['flamedetect']);
+				});
+				$.getJSON(url7,function(data7) {
+                    var val7= data7;
+                   var temper=(data7['factory'][(Object.keys(data7['factory']).length)-1]['tempdetect']);
+                   document.getElementById("temp").innerHTML = "<img src = 'temperature.png' height=\"60px\" width=\"60px\" style='vertical-align: middle' />  " +temper;
+					console.log(data7['factory'][(Object.keys(data7['factory']).length)-1]['tempdetect']);
+				});
+				$.getJSON(url8,function(data8) {
+                    var val8= data8;
+                   var inti=(data8['factory'][(Object.keys(data8['factory']).length)-1]['intencontrol']);
+                   document.getElementById("inten").innerHTML = "<img src = 'intensity.png' height=\"60px\" width=\"60px\" style='vertical-align: middle' />  " +inti;
+					console.log(data8['factory'][(Object.keys(data8['factory']).length)-1]['intencontrol']);
+				});
+        }
+        window.setInterval(function(){
+        loaddata();
+            }, 5000);
+	
+	</script>
+<style>
+    .row{
+        justify-content: space-around;
+    }
+    .jumbotron{
+        margin-top:1em;
+    }
+    .fa-trash-restore{
+        font-size: 1.2em;
+        margin-right:0.5em;
+    }
+    
+</style>
+</head>
+
+<body>
+
+
+    <!-- Image and text -->
+    <nav class="navbar navbar-light" style="background-color: #bbbcb1">
+        <a class="navbar-brand" href="#">
+          EGO Factory
+        </a>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, Eman Mohamed!</h1>
+            <p class="lead">This is a simple unit For your Factory operations , Status of your products ,observation of products, Security and Saftey For your Factory
+                .</p>
+            <hr class="my-4">
+            <p>Have a nice day :)</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="card  text-center col-4" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-text text-success">Total Produced Soaps</h4>
+            <p style = 'line-height: 60px;font-family: Helvetica;color: #008080;font-size: 50px;' id="TOT">
+                <img src = 'TOTAL.png' height="60px" width="60px" style='vertical-align: middle' /> 0
+            </p>
+                    </div>
+                </div>
+                <div class="card  text-center col-4" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-text text-success">Qualified Produced Soaps</h4>
+            <p style = 'line-height: 60px;font-family: Helvetica;color: #008080;font-size: 50px;' id="qua">
+                <img src = 'QUALIFIED.png' height="60px" width="60px" style='vertical-align: middle' /> 0
+            </p>
+                    </div>
+                </div>
+                <div class="card  text-center col-4" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-text text-danger">Rejected Moisture Soaps</h4>
+                         <p style = 'line-height: 60px;font-family: Helvetica;color: #008080;font-size: 50px;' id="water">
+                <img src = 'humidity.png' height="60px" width="60px" style='vertical-align: middle' /> 0
+            </p>
+                    </div>
+                </div>
+                <div class="card text-center col-4" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-text text-danger">Rejected Color Soaps</h4>
+                         <p style = 'line-height: 60px;font-family: Helvetica;color: #008080;font-size: 50px;' id="col">
+                <img src = 'color.png' height="60px" width="60px" style='vertical-align: middle' /> 0
+            </p>
+                    </div>
+                </div>
+                <div class="card text-center col-4" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-text text-danger">Rejected Shape Soaps</h4>
+                         <p style = 'line-height: 60px;font-family: Helvetica;color: #008080;font-size: 50px;' id="sha">
+                <img src = 'shape.png' height="60px" width="60px" style='vertical-align: middle' /> 0
+            </p>
+                    </div>
+                </div>
+                <div class="card text-center col-4" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-text text-danger">Rejected Weight Soaps</h4>
+                           <p style = 'line-height: 60px;font-family: Helvetica;color: #008080;font-size: 50px;' id="wei">
+                <img src = 'Weight.png' height="60px" width="60px" style='vertical-align: middle' /> 0
+            </p>
+                    </div>
+                </div>
+                <div class="card text-center col-4" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="text-info card-text">Temperature Status</h4>
+                         <p style = 'line-height: 60px;font-family: Helvetica;color: #008080;font-size: 50px;' id="temp">
+                <img src = 'temperature.png' height="60px" width="60px" style='vertical-align: middle' /> Low
+            </p>
+                    </div>
+                </div>
+				<div class="card text-center col-4" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-text text-warning">Firing System Status</h4>
+                        <p style = 'line-height: 60px;font-family: Helvetica;color: #008080;font-size: 50px;' id="fire">
+                <img src = 'fire.png' height="60px" width="60px" style='vertical-align: middle' /> Secured
+            </p>
+                    </div>
+                </div>
+                <div class="card text-center col-4" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-text text-error">Intensity Status</h4>
+                         <p style = 'line-height: 60px;font-family: Helvetica;color: #008080;font-size: 50px;' id="inten">
+                <img src = 'intensity.png' height="60px" width="60px" style='vertical-align: middle' /> Low
+            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+   
+
+</html>
